@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>管理员页面</title>
-  </head>
-  <body>
-    <!-- <script src="../node_modules/leancloud-storage/dist/av-min.js"></script> -->
-    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
+</head>
 
+<body>
+    <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script> -->
+
+    <script src="../node_modules/qiniu-js/dist/qiniu.min.js"></script>
     <script>
-      var APP_ID = "pGBHn7dLqhf2jd98aSUhRNpO-gzGzoHsz";
-      var APP_KEY = "Al6MQyVAbCNGa9wXGFkwWGV1";
+        var APP_ID = "pGBHn7dLqhf2jd98aSUhRNpO-gzGzoHsz";
+        var APP_KEY = "Al6MQyVAbCNGa9wXGFkwWGV1";
 
-      AV.init({
-        appId: APP_ID,
-        appKey: APP_KEY
-      });
+        AV.init({
+            appId: APP_ID,
+            appKey: APP_KEY
+        });
     </script>
-  </body>
+    <script>
+        // var observer = {
+        //     next(res){
+
+        //     },
+        //     error(err){
+
+        //     },
+        //     complete(res){
+
+        //     }
+
+        // }
+
+        // var observable = qiniu.upload()
+        // var subscription = observable.subscribe(observer) // 上传开始
+        // subscription.unsubscribe() // 上传取消
+    </script>
+</body>
+
 </html>

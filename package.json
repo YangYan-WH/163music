@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/YangYan-WH/163music#readme",
   "dependencies": {
-    "leancloud-storage": "^3.11.1"
+    "leancloud-storage": "^3.11.1",
+    "qiniu-js": "^2.5.3"
   }
 }
