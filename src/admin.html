@@ -6,12 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>管理员页面</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            padding: 50px 80px;
+            border-radius: 5px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            flex-direction: column;
+        }
+        span{
+            cursor: pointer;
+
+        }
+    
+    </style>
 </head>
 
 <body>
     <div id="container">
-        <button id='pickfiles'>upload</button>
+        <span id='pickfiles'>点击或拖曳文件</span>
     </div>
+    <div id="uploadStatus"></div>
     <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
     <!-- <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script> -->
     <script src="../node_modules/plupload/js/moxie.min.js"></script>
@@ -78,8 +100,10 @@
                 },
                 'UploadProgress': function (up, file) {
                     // 每个文件上传时，处理相关的事情
+                    uploadStatus.textContent = '上传中'
                 },
                 'FileUploaded': function (up, file, info) {
+                    uploadStatus.textContent = '上传完毕'
                     // 每个文件上传成功后，处理相关的事情
                     // 其中info.response是文件上传成功后，服务端返回的json，形式如：
                     // {
