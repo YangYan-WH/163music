@@ -37,7 +37,6 @@ input {
 .page>aside {
     width: 200px;
     
-    /* border: 1px solid black; */
 }
 
 .page>main {
@@ -60,20 +59,22 @@ input {
 .page>aside>.newSong.active {
     background: #d4d4d4;
 }
-
-.page>aside>.songList {
+.page>aside>#songList-container{
     flex-grow: 1;
+}
+.page>aside .songList {
+    /* flex-grow: 1; */
     text-align: left;
     border-top: 1px solid #999;
 }
 
-.page>aside>.songList>li {
+.page>aside .songList>li {
     border-bottom: 1px solid #ddd;
     padding: 10px;
     /* margin: 0 10px; */
 }
 
-.page>aside>.songList>li.active {
+.page>aside .songList>li.active {
     background: #d4d4d4;
 }
 
