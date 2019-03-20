@@ -36,7 +36,8 @@ var server = http.createServer(function(request, response){
     var options = {
       //scope: '163-music-demo-1',
     //   scope:'netease-cloud-music-demo-11',
-        scope: '163music'
+        // scope: '163music'
+        scope:'163music_03'
     };
     var putPolicy = new qiniu.rs.PutPolicy(options);
     var uploadToken=putPolicy.uploadToken(mac);
